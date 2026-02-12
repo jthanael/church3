@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Worship & Music Ministry at Gospel Crusade Church of Billerica. Meet our media and musician teams. | Ministè Adorasyon ak Mizik nan Gospel Crusade Church.">
+  <title>Worship & Music · Adorasyon & Mizik | Gospel Crusade Church</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="worship-music.css">
+</head>
+<body>
+
+  <!-- Navigation (same as main site) -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.jpg" alt="Gospel Crusade Church Logo" class="nav-logo" width="46" height="46">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Gospel Crusade</span>
+          <span class="nav-brand-sub">Church of Billerica</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About / Konsènan</a></li>
+        <li><a href="index.html#videos">Messages / Mesaj</a></li>
+        <li><a href="index.html#staff">Leadership / Lidèchip</a></li>
+        <li><a href="index.html#events">Events / Evènman</a></li>
+        <li><a href="index.html#prayer-request">Prayer / Lapriyè</a></li>
+        <li><a href="worship-music.html" class="nav-link-active">Worship / Adorasyon</a></li>
+        <li><a href="index.html" class="nav-cta">Home / Akèy</a></li>
+      </ul>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="wm-hero">
+    <div class="wm-hero-bg"></div>
+    <div class="wm-hero-overlay"></div>
+    <div class="hero-grain"></div>
+    <div class="wm-hero-content">
+      <span class="hero-badge">
+        <span class="badge-dot"></span>
+        Ministry · Ministè
+      </span>
+      <h1>Worship &amp; Music</h1>
+      <p class="wm-hero-creole">Adorasyon &amp; Mizik</p>
+      <p class="wm-hero-subtitle">Behind the scenes of our praise — the teams that bring worship to life every Sunday.</p>
+      <p class="wm-hero-subtitle wm-hero-subtitle-ht">Dèyè sèn adorasyon nou an — ekip ki bay adorasyon lavi chak Dimanch.</p>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ===== Teams Section ===== -->
+    <section class="section section-warm" id="teams">
+      <div class="container">
+        <div class="section-header anim-reveal">
+          <span class="section-tag">Our Teams · Ekip Nou yo</span>
+          <h2 class="section-title">Meet the Ministry<br><span class="section-title-creole-inline">Rankontre Ministè a</span></h2>
+        </div>
+
+        <div class="teams-row">
+
+          <!-- Media Team -->
+          <div class="team-column anim-reveal">
+            <div class="team-header">
+              <h3 class="team-name">Media Team · Ekip Medya</h3>
+              <div class="team-filter">
+                <label for="mediaSelect" class="sr-only">Filter Media Team</label>
+                <select id="mediaSelect" aria-controls="mediaTeam" class="team-select">
+                  <option value="all">All Members · Tout Manm</option>
+                  <option value="none">Hide · Kache</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="mediaTeam" class="team-grid">
+              <article class="member-card" data-name="Tech1">
+                <div class="member-img-wrap">
+                  <img src="images/Tech1.jpg" alt="Tech1" loading="lazy">
+                </div>
+                <h4>Tech1</h4>
+                <p>Media Team · Ekip Medya</p>
+              </article>
+
+              <article class="member-card" data-name="Harold G. Mindron">
+                <div class="member-img-wrap">
+                  <img src="images/tech3.jpg" alt="Harold G. Mindron" loading="lazy">
+                </div>
+                <h4>Harold G. Mindron</h4>
+                <p>Media Team · Ekip Medya</p>
+              </article>
+
+              <article class="member-card" data-name="Tech2">
+                <div class="member-img-wrap">
+                  <img src="images/tech2.jpg" alt="Tech2" loading="lazy">
+                </div>
+                <h4>Tech2</h4>
+                <p>Media Team · Ekip Medya</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Musician Team -->
+          <div class="team-column anim-reveal">
+            <div class="team-header">
+              <h3 class="team-name">Musician Team · Ekip Mizisyen</h3>
+              <div class="team-filter">
+                <label for="musicianSelect" class="sr-only">Filter Musician Team</label>
+                <select id="musicianSelect" aria-controls="musicianTeam" class="team-select">
+                  <option value="all">All Members · Tout Manm</option>
+                  <option value="none">Hide · Kache</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="musicianTeam" class="team-grid">
+              <article class="member-card" data-name="P. Amstrong B">
+                <div class="member-img-wrap">
+                  <img src="images/musician1.jpg" alt="P. Amstrong B" loading="lazy">
+                </div>
+                <h4>P. Amstrong B</h4>
+                <p>Guitar · Gita</p>
+              </article>
+
+              <article class="member-card" data-name="Ezechiel">
+                <div class="member-img-wrap">
+                  <img src="images/musician2.jpg" alt="Ezechiel" loading="lazy">
+                </div>
+                <h4>Ezechiel</h4>
+                <p>Drum · Tanbou</p>
+              </article>
+
+              <article class="member-card" data-name="P. Ernson">
+                <div class="member-img-wrap">
+                  <img src="images/musician3.jpg" alt="P. Ernson" loading="lazy">
+                </div>
+                <h4>P. Ernson</h4>
+                <p>Sound / Keys · Son / Klav</p>
+              </article>
+
+              <article class="member-card" data-name="Wilmaer">
+                <div class="member-img-wrap">
+                  <img src="images/musician4.jpg" alt="Wilmaer" loading="lazy">
+                </div>
+                <h4>Wilmaer</h4>
+                <p>Keys / Bass · Klav / Bas</p>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Live Stream Section ===== -->
+    <section class="section section-dark" id="live-stream">
+      <div class="container">
+        <div class="section-header anim-reveal">
+          <span class="section-tag section-tag--light">Watch Live · Gade an Dirèk</span>
+          <h2 class="section-title section-title--light">Worship Live Stream<br><span class="creole-heading">Adorasyon an Dirèk</span></h2>
+        </div>
+
+        <div class="stream-card anim-reveal">
+          <div class="stream-embed">
+            <iframe
+              src="https://www.youtube.com/embed/LIVE_STREAM_ID1"
+              title="Live Worship Service"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="stream-info">
+            <div class="live-badge">
+              <span class="live-dot"></span>
+              LIVE · AN DIRÈK
+            </div>
+            <h3>Worship Service · Sèvis Adorasyon</h3>
+            <p>Join us every Sunday at 1:00 PM · Vin jwenn nou chak Dimanch a 1:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Events / Flyers Section ===== -->
+    <section class="section" id="worship-events">
+      <div class="container">
+        <div class="section-header anim-reveal">
+          <span class="section-tag">Events · Evènman</span>
+          <h2 class="section-title">Worship Events · Evènman Adorasyon</h2>
+        </div>
+
+        <div class="flyer-scroll anim-reveal">
+          <div class="flyer-card">
+            <div class="flyer-img-wrap">
+              <img src="images/flyer/flyer3.jpg" alt="Sunday Service Flyer" loading="lazy">
+            </div>
+            <div class="flyer-info">
+              <h3>Sunday Service · Sèvis Dimanch</h3>
+              <p class="flyer-time">Every Sunday · Chak Dimanch — 1:00 PM – 3:00 PM</p>
+              <p class="flyer-desc">Join us for service, prayer and worship.<br><span class="creole-label">Vin jwenn nou pou sèvis, lapriyè ak adorasyon.</span></p>
+            </div>
+          </div>
+
+          <div class="flyer-card">
+            <div class="flyer-img-wrap">
+              <img src="images/flyer/flyer1.jpg" alt="Online Service Flyer" loading="lazy">
+            </div>
+            <div class="flyer-info">
+              <h3>Online Service · Sèvis sou Entènèt</h3>
+              <p class="flyer-time">TBD · A detèmine</p>
+              <p class="flyer-desc">Stay connected wherever you are.<br><span class="creole-label">Rete konekte kèlkeswa kote ou ye.</span></p>
+            </div>
+          </div>
+
+          <div class="flyer-card">
+            <div class="flyer-img-wrap">
+              <img src="images/flyer/flyer2.jpg" alt="3 Days Conference Flyer" loading="lazy">
+            </div>
+            <div class="flyer-info">
+              <h3>Conference · Konferans</h3>
+              <p class="flyer-time">3-Day Conference · Konferans 3 Jou</p>
+              <p class="flyer-desc">A powerful time of worship and teaching.<br><span class="creole-label">Yon moman pwisan adorasyon ak ansèyman.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Resources Section ===== -->
+    <section class="section section-warm" id="resources">
+      <div class="container">
+        <div class="section-header anim-reveal">
+          <span class="section-tag">Resources · Resous</span>
+          <h2 class="section-title">Music Resources · Resous Mizik</h2>
+        </div>
+
+        <div class="resources-grid anim-reveal">
+          <a href="resources/songbook.pdf" class="resource-card">
+            <div class="resource-icon">📖</div>
+            <h3>Songbook · Liv Chante</h3>
+            <p>Download PDF · Telechaje PDF</p>
+            <span class="resource-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <a href="resources/lyrics" class="resource-card">
+            <div class="resource-icon">🎵</div>
+            <h3>Worship Lyrics · Pawòl Chante</h3>
+            <p>View lyrics · Gade pawòl yo</p>
+            <span class="resource-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <a href="resources/chords" class="resource-card">
+            <div class="resource-icon">🎸</div>
+            <h3>Chords &amp; Sheets · Akò &amp; Patisyon</h3>
+            <p>Sheet music · Mizik an fèy</p>
+            <span class="resource-arrow">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Back to Home CTA ===== -->
+    <section class="section section-accent wm-cta-section">
+      <div class="container" style="text-align:center; position:relative; z-index:1;">
+        <div class="anim-reveal">
+          <h2 class="section-title section-title--light">Join Us for Worship<br><span class="creole-heading">Vin Jwenn Nou pou Adorasyon</span></h2>
+          <p class="section-subtitle section-subtitle--light" style="margin-bottom:2rem;">Every Sunday at 1:00 PM · Chak Dimanch a 1:00 PM</p>
+          <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+            <a href="index.html" class="btn btn-primary" style="background:var(--gold); color:var(--navy-dark);">
+              Back to Home · Retounen Lakay
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="index.html#prayer-request" class="btn btn-ghost">
+              Prayer Request · Demann Lapriyè
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Gospel Crusade Church</h4>
+        <p>Building faith, family, and community through the love of Christ since 2010.</p>
+        <p class="footer-creole">Bati lafwa, fanmi, ak kominote atravè lanmou Kris la depi 2010.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Service Times · Lè Sèvis yo</h4>
+        <ul>
+          <li>Sunday Worship · Adorasyon Dimanch: 1:00 – 3:00 PM</li>
+          <li>Wednesday Bible Study · Etid Bib Mèkredi: 7:00 PM</li>
+          <li>Youth Fellowship · Reyinyon Jèn: Friday · Vandredi 6:30 PM</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us · Kontakte Nou</h4>
+        <ul>
+          <li>30 River St, Billerica, MA 01821</li>
+          <li><a href="tel:+16177993920">(617) 799-3920</a></li>
+          <li><a href="mailto:info@gospelcrusadechurch.org">info@gospelcrusadechurch.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Gospel Crusade Church of Billerica. All rights reserved. · Tout dwa rezève.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ===== Mobile Menu ===== */
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('show');
+      document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('show') &&
+          !navLinks.contains(e.target) &&
+          !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('show');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* ===== Team Filter Dropdowns ===== */
+    function setupTeamFilter(selectId, gridId) {
+      const select = document.getElementById(selectId);
+      const grid = document.getElementById(gridId);
+      if (!select || !grid) return;
+
+      const cards = Array.from(grid.querySelectorAll('.member-card'));
+
+      function update() {
+        const val = select.value;
+        if (val === 'none') {
+          grid.style.display = 'none';
+          return;
+        }
+        grid.style.display = '';
+        cards.forEach(card => {
+          card.style.display = (val === 'all' || card.dataset.name === val) ? '' : 'none';
+        });
+      }
+
+      select.addEventListener('change', update);
+      select.value = 'all';
+      update();
+    }
+
+    setupTeamFilter('mediaSelect', 'mediaTeam');
+    setupTeamFilter('musicianSelect', 'musicianTeam');
+
+    /* ===== Scroll Animations ===== */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.anim-reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

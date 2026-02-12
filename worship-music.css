@@ -1,0 +1,442 @@
+/* ============================================================
+   Worship & Music Page — Specific Styles
+   Extends the main style.css design system
+   ============================================================ */
+
+/* ===== Screen Reader Only ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== Active Nav Link ===== */
+.nav-link-active {
+  color: var(--gold-dark) !important;
+  font-weight: 700 !important;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 1px;
+}
+
+/* ===== Worship Hero ===== */
+.wm-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 72px;
+}
+
+.wm-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('images/backgroundhero.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: heroZoom 25s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  0%   { transform: scale(1);    }
+  100% { transform: scale(1.08); }
+}
+
+.wm-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(27,42,74,0.65) 0%,
+    rgba(27,42,74,0.45) 50%,
+    rgba(15,26,48,0.70) 100%
+  );
+}
+
+.wm-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--white);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.wm-hero-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  animation: fadeUp 0.9s var(--ease-out) 0.15s forwards;
+  opacity: 0;
+}
+
+.wm-hero-creole {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--gold-light);
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.9s var(--ease-out) 0.25s forwards;
+  opacity: 0;
+}
+
+.wm-hero-subtitle {
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  opacity: 0.9;
+  line-height: 1.6;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  animation: fadeUp 0.9s var(--ease-out) 0.35s forwards;
+  opacity: 0;
+  margin-bottom: 0.5rem;
+}
+
+.wm-hero-subtitle-ht {
+  color: var(--gold-light);
+  font-style: italic;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  margin-bottom: 0;
+}
+
+/* ===== Section Title Creole Inline ===== */
+.section-title-creole-inline {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--gold-dark);
+  font-size: 0.7em;
+}
+
+/* ===== Teams Layout ===== */
+.teams-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+.team-column {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(44,40,36,0.06);
+}
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.team-select {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--sand);
+  border-radius: 50px;
+  background: var(--cream);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.team-select:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212,168,75,0.15);
+}
+
+/* ===== Team Member Grid ===== */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.member-card {
+  width: 140px;
+  text-align: center;
+  transition: all 0.3s var(--ease-out);
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+}
+
+.member-img-wrap {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 0.75rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--sand);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s var(--ease-out);
+}
+
+.member-card:hover .member-img-wrap {
+  border-color: var(--gold);
+  box-shadow: 0 4px 20px rgba(212,168,75,0.25);
+}
+
+.member-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.15rem;
+}
+
+.member-card p {
+  font-size: 0.78rem;
+  color: var(--stone);
+  font-weight: 500;
+}
+
+/* ===== Live Stream Card ===== */
+.stream-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.stream-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  background: rgba(0,0,0,0.3);
+}
+
+.stream-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.stream-info {
+  padding: 1.5rem;
+}
+
+.stream-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.stream-info p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+}
+
+/* ===== Flyer Scroll ===== */
+.flyer-scroll {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.flyer-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(44,40,36,0.06);
+  transition: all 0.3s var(--ease-out);
+}
+
+.flyer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+
+.flyer-img-wrap {
+  height: 220px;
+  overflow: hidden;
+}
+
+.flyer-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.flyer-card:hover .flyer-img-wrap img {
+  transform: scale(1.05);
+}
+
+.flyer-info {
+  padding: 1.25rem 1.5rem;
+}
+
+.flyer-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.35rem;
+}
+
+.flyer-time {
+  font-size: 0.8rem;
+  color: var(--gold-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.flyer-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== Resources Grid ===== */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.resource-card {
+  display: block;
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(44,40,36,0.06);
+  transition: all 0.3s var(--ease-out);
+  text-decoration: none !important;
+  position: relative;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+
+.resource-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+
+.resource-card p {
+  font-size: 0.85rem;
+  color: var(--stone);
+}
+
+.resource-arrow {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: all 0.3s var(--ease-out);
+}
+
+.resource-card:hover .resource-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== CTA Section ===== */
+.wm-cta-section {
+  padding: 4rem 2rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .teams-row {
+    grid-template-columns: 1fr;
+  }
+
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wm-hero {
+    min-height: 45vh;
+  }
+
+  .flyer-scroll {
+    grid-template-columns: 1fr;
+  }
+
+  .stream-info {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wm-hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .team-column {
+    padding: 1.25rem;
+  }
+
+  .member-card {
+    width: 110px;
+  }
+
+  .member-img-wrap {
+    width: 80px;
+    height: 80px;
+  }
+}
