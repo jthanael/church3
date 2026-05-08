@@ -409,7 +409,7 @@ ul { list-style: none; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('images/backgroundhero.jpg');
+  background-image: url('images/test.jpg');
   background-size: cover;
   background-position: center;
   animation: heroZoom 25s ease-in-out infinite alternate;
